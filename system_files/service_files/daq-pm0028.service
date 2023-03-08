@@ -1,0 +1,10 @@
+[Unit]
+Description= app-daq instance PM0028
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/srv/app_daq/app.sh -d PM0028
+
+[Install]
+WantedBy=multi-user.target

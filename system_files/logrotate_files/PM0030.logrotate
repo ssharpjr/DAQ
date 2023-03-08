@@ -1,0 +1,10 @@
+/srv/app_daq/log/PM0030.log {
+     rotate 7
+     daily
+     compress
+     delaycompress
+     missingok
+     notifempty
+     su www-data www-data
+     create 660 www-data www-data 
+}

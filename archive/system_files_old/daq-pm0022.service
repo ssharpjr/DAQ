@@ -1,0 +1,13 @@
+[Unit]
+Description= DAQ PM0022 tmux Service
+PartOf=master.service
+After=master.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/srv/app_daq/app.sh PM0022
+ExecStop=/usr/bin/tmux kill-session -t PM0022
+
+[Install]
+WantedBy=multi-user.target

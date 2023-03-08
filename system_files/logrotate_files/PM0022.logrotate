@@ -1,0 +1,13 @@
+/srv/app_daq/log/PM0022.log {
+     rotate 7
+     daily
+     compress
+     delaycompress
+     missingok
+     notifempty
+     su www-data www-data
+     create 660 www-data www-data
+     postrotate
+          /bin/systemctl restart daq-pm0022.service
+     endscript
+}
